@@ -18,10 +18,26 @@ namespace FirstAPI.Controllers
         public string Get()
         {
             return "Hello World";
-        }        // GET api/HelloWorld/id       
+        }        
+        // GET api/HelloWorld/id       
         public string Get(string id)
         {
-            return "Hello " + id; }
-    
-}
+            var returnValue = "";
+         //   var isNumeric = int.TryParse(id, out int n);
+
+            switch (id)
+            {
+                case "1":
+                  //  int isNumeric when isNumeric > 12:
+
+                    returnValue = "int";
+                    break;
+                default:
+                    returnValue = "else";
+                    break;
+            }
+            return returnValue + id;
+        }
+
+    }
 }
